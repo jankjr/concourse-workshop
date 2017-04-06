@@ -51,7 +51,7 @@ jobs:
         - |
           apt-get update
           apt-get install -y curl
-          curl https://bl.ocks.org/sharor/raw/4b2015849c31bfb860c6a021ba9ed63a/
+          curl https://bl.ocks.org/jankjr/raw/c4ae90d1d373c4018bb6ccab734498b7/
   - task: link-checker
     config:
       platform: linux
@@ -63,7 +63,7 @@ jobs:
         args:
         - -exc
         - |
-          linkchecker http://bl.ocks.org/sharor/raw/4b2015849c31bfb860c6a021ba9ed63a/
+          linkchecker http://bl.ocks.org/jankjr/raw/c4ae90d1d373c4018bb6ccab734498b7/
 - name: update-production-site
   public: true
   plan:
@@ -86,7 +86,7 @@ resources:
 - name: gist
   type: git 
   source: 
-    uri: https://gist.github.com/4b2015849c31bfb860c6a021ba9ed63a.git
+    uri: https://gist.github.com/c4ae90d1d373c4018bb6ccab734498b7.git
     branch: master
     username: {{github-username}}
     password: {{github-password}}
